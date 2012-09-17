@@ -1,0 +1,41 @@
+set gfn=Monaco:h10
+color ekvoli
+
+" Some of my enhanced color schemes
+" color macvim-muted     - https://github.com/galtenberg/macvim-muted.vim
+" color railscasts-black - https://github.com/galtenberg/railscasts-black.vim
+" color goldenrod        - https://github.com/galtenberg/goldenrod.vim
+
+" Other great color schemes
+" color blue, bluegreen, candycode, golden
+" color darkbone, darkspectrum, freya
+" color lucius, mustang, twilight, solarized
+
+" Sometimes necessary to get darkest color scheme
+" set background=dark
+" highlight Normal guibg=black
+
+set fu                                 " MacVim - Start full-screen
+set splitright spr                     " Make first split to right
+
+set guicursor+=a:blinkon0
+set guioptions-=T                      " MacVim - Removes top toolbar
+set guioptions-=r                      " MacVim - Removes right hand scroll bar
+set go-=L                              " MacVim - Removes left hand scroll bar
+
+set vb t_vb=                           " Disable beeps
+
+set statusline=%f\ %m\ %r              " Minimal statusline
+set statusline+=%l/%L
+
+let g:ctrlp_match_window_reversed = 0  " Make CtrlP show best results on top
+let g:ctrlp_by_filename = 1
+
+" Double-colon turns highlights off
+map :: :noh<CR>
+
+au FocusLost * silent! wall            " Save all files when focus changes
+autocmd BufWritePre * :%s/\s\+$//e     " Strip trailing whitespace on save
+au FocusLost * silent! mks!            " Save session when focus changes
+set sessionoptions-=options            " Don't store options in Session
+source Session.vim                     " Reopen last session automatically
