@@ -20,8 +20,8 @@ set splitright spr                     " Make first split to right
 
 set guicursor+=a:blinkon0
 set guioptions-=T                      " MacVim - Removes top toolbar
-set guioptions-=r                      " MacVim - Removes right hand scroll bar
-set go-=L                              " MacVim - Removes left hand scroll bar
+set guioptions-=r                      " MacVim - Removes right-hand scroll bar
+set go-=L                              " MacVim - Removes left-hand scroll bar
 
 set vb t_vb=                           " Disable beeps
 
