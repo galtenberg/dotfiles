@@ -34,6 +34,9 @@ let g:ctrlp_by_filename = 1
 " Double-colon turns highlights off
 map :: :noh<CR>
 
+" Workaround for vroom, run individual tests
+let g:vroom_test_unit_command = 'testrbl -Itest'
+
 au FocusLost * silent! wall            " Save all files when focus changes
 autocmd BufWritePre * :%s/\s\+$//e     " Strip trailing whitespace on save
 au FocusLost * silent! mks!            " Save session when focus changes
