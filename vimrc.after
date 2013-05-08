@@ -33,6 +33,15 @@ let g:ctrlp_match_window_reversed = 0  " Make CtrlP show best results on top
 let g:ctrlp_by_filename = 1
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_reuse_window = 1
+let g:ctrlp_abbrev = {
+    \ 'abbrevs': [
+        \ {
+        \ 'pattern': '-',
+        \ 'expanded': '_',
+        \ 'mode': 'pfrz',
+        \ },
+        \ ]
+    \ }
 
 " Double-colon turns highlights off
 map :: :noh<CR>
