@@ -25,11 +25,14 @@ set go-=L                              " MacVim - Removes left-hand scroll bar
 
 set vb t_vb=                           " Disable beeps
 
-set statusline=%f\ %m\ %r              " Minimal statusline
+set statusline=%f\ %m\ %r
 set statusline+=%l/%L
+set statusline+=\ %c
 
 let g:ctrlp_match_window_reversed = 0  " Make CtrlP show best results on top
 let g:ctrlp_by_filename = 1
+let g:ctrlp_show_hidden = 1
+let g:ctrlp_reuse_window = 1
 
 " Double-colon turns highlights off
 map :: :noh<CR>
