@@ -25,9 +25,11 @@ set go-=L                              " MacVim - Removes left-hand scroll bar
 
 set vb t_vb=                           " Disable beeps
 
-set statusline=%f\ %m\ %r
+set statusline=%f\ %m\ %r              " filename 58/152 1 (line 58 of 152, column 1)
 set statusline+=%l/%L
 set statusline+=\ %c
+
+vmap / y/<C-R>"<CR>                    " Use / to search current Visual selection
 
 let g:ctrlp_match_window_reversed = 0  " Make CtrlP show best results on top
 let g:ctrlp_by_filename = 1
