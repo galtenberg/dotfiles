@@ -31,6 +31,16 @@ set statusline+=\ %c
 
 vmap / y/<C-R>"<CR>                    " Use / to search current Visual selection
 
+# don't cheat with arrow keys
+map <Left> <Nop>
+map <Right> <Nop>
+map <Up> <Nop>
+map <Down> <Nop>
+imap <Left> <Nop>
+imap <Right> <Nop>
+imap <Up> <Nop>
+imap <Down> <Nop>
+
 let g:ctrlp_match_window_reversed = 0  " Make CtrlP show best results on top
 let g:ctrlp_by_filename = 1
 let g:ctrlp_show_hidden = 1
