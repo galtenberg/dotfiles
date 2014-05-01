@@ -1,5 +1,7 @@
 [alias]
-  diffmaster = log Diamonds..master --pretty=format:'[ ] %Cred%h%Creset - %C(bold blue)<%an>%Creset %C(yellow)%d%Creset %s %Cgreen(%cr)' --abbrev-commit --date=relative
   tree = log --graph --decorate --pretty=oneline --abbrev-commit --all
   lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
   sb = status -sb
+  co = checkout
+  addi = add --interactive
+  commitiv = commit -v --interactive
