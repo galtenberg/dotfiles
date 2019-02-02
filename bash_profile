@@ -10,9 +10,6 @@ source ~/.git-completion
 
 export EDITOR=mvim
 
-# Load the default .profile
-[[ -s "$HOME/.profile" ]] && source "$HOME/.profile"
-
 # NVM
 [ -r ~/.bashrc ] && . ~/.bashrc
 nvm use node
