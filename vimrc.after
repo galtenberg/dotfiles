@@ -1,5 +1,5 @@
 set gfn=Monaco:h10
-color ekvoli
+color twilight
 
 " Some of my enhanced color schemes
 " color macvim-muted     - https://github.com/galtenberg/macvim-muted.vim
@@ -8,12 +8,12 @@ color ekvoli
 
 " Other great color schemes
 " color blue, bluegreen, candycode, golden
-" color darkbone, darkspectrum, freya
+" color darkbone, darkspectrum, ekvoli, freya
 " color lucius, mustang, twilight, solarized
 
 " Sometimes necessary to get darkest color scheme
-" set background=dark
-" highlight Normal guibg=black
+set background=dark
+highlight Normal guibg=black
 
 set fu                                 " MacVim - Start full-screen
 set splitright spr                     " Make first split to right
@@ -29,17 +29,17 @@ set statusline=%f\ %m\ %r              " filename 58/152 1 (line 58 of 152, colu
 set statusline+=%l/%L
 set statusline+=\ %c
 
-vmap / y/<C-R>"<CR>                    " Use / to search current Visual selection
+" vmap / y/<C-R>"<CR>                    " Use / to search current Visual selection
 
 # don't cheat with arrow keys
 map <Left> <Nop>
 map <Right> <Nop>
 map <Up> <Nop>
 map <Down> <Nop>
-imap <Left> <Nop>
-imap <Right> <Nop>
-imap <Up> <Nop>
-imap <Down> <Nop>
+" imap <Left> <Nop>
+" imap <Right> <Nop>
+" imap <Up> <Nop>
+" imap <Down> <Nop>
 
 let g:ctrlp_match_window_reversed = 0  " Make CtrlP show best results on top
 let g:ctrlp_by_filename = 1
@@ -59,10 +59,16 @@ let g:ctrlp_abbrev = {
 map :: :noh<CR>
 
 " Workaround for vroom, run individual tests
-let g:vroom_test_unit_command = 'testrbl -Itest'
+" let g:vroom_test_unit_command = 'testrbl -Itest'
 
 au FocusLost * silent! wall            " Save all files when focus changes
 autocmd BufWritePre * :%s/\s\+$//e     " Strip trailing whitespace on save
-au FocusLost * silent! mks!            " Save session when focus changes
-set sessionoptions-=options            " Don't store options in Session
-source Session.vim                     " Reopen last session automatically
+" au FocusLost * silent! mks!            " Save session when focus changes
+" set sessionoptions-=options            " Don't store options in Session
+" source Session.vim                     " Reopen last session automatically
+
+" Stop Mac's terrible visual mode blocking copy/paste
+vmap <C-x> :!pbcopy<CR>
+vmap <C-c> :w !pbcopy<CR><CR>
+
+let NERDTreeIgnore=['dist$[[dir]]']
