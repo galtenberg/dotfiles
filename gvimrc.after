@@ -1,0 +1,21 @@
+au FocusLost * silent! wall " Save all files when focus changes
+autocmd BufWritePre * :%s/\s\+$//e " Strip trailing whitespace on save
+" au FocusLost * silent! mks! " Save session when focus changes
+" set sessionoptions-=options " Don't store options in Session
+" source Session.vim " Reopen last session automatically
+
+" MacVim Settings
+set fu " MacVim - Start full-screen
+set splitright spr " Make first split to right
+set guicursor+=a:blinkon0
+" set guioptions-=T " MacVim - Removes top toolbar
+set guioptions-=r " MacVim - Removes right-hand scroll bar
+set go-=L " MacVim - Removes left-hand scroll bar
+set vb t_vb= " Disable beeps
+
+" iTerm2 Settings
+" http://softwareas.com/coding-with-the-janus-vim-distro/
+" set mouse=a
+" set ttym=xterm2
+" http://kevin.colyar.net/2011/01/pretty-vim-color-schemes-in-iterm2
+" set t_Co=256
