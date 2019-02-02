@@ -15,9 +15,6 @@ color twilight
 set background=dark
 highlight Normal guibg=black
 
-set fu                                 " MacVim - Start full-screen
-set splitright spr                     " Make first split to right
-
 set guicursor+=a:blinkon0
 set guioptions-=T                      " MacVim - Removes top toolbar
 set guioptions-=r                      " MacVim - Removes right-hand scroll bar
@@ -31,7 +28,7 @@ set statusline+=\ %c
 
 " vmap / y/<C-R>"<CR>                    " Use / to search current Visual selection
 
-# don't cheat with arrow keys
+" don't cheat with arrow keys
 map <Left> <Nop>
 map <Right> <Nop>
 map <Up> <Nop>
